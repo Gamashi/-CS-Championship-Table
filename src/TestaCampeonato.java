@@ -4,13 +4,8 @@ public class TestaCampeonato {
 
 
         Campeonato c = new Campeonato();
+        c.Inicio();
         
-
-        // Time time = new Time("Imperial");
-        // Time time2 = new Time("Furia");
-        // Time time3 = new Time("MIBR");
-        // Time time4 = new Time("00 Nation");
-        // Partida partida = new Partida(time, time2);
 
     }
     

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 public class Campeonato {
 
     private Scanner sc;
-    private Time time;
     private ArrayList <Time> equipes;
     private Partida partida;
 
@@ -13,7 +12,7 @@ public class Campeonato {
         sc = new Scanner(System.in);
         equipes = new ArrayList<Time>();
 
-        for (int i = 1; i <= 6; i++){
+        for (int i = 1; i <= 2; i++){
 
             System.out.println("Digite o nome do time " + i + ": ");
             Time time = new Time(this.sc.nextLine());
@@ -21,6 +20,9 @@ public class Campeonato {
             System.out.println(time.getNome());
     
         }
+    }
+
+    public void Inicio(){
 
         for (int i = 0; i < equipes.size(); i+= 2){
             Time time1 = equipes.get(i);
@@ -29,5 +31,4 @@ public class Campeonato {
             
         }
     }
-    
 }
