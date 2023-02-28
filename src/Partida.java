@@ -23,4 +23,6 @@ public class Partida {
             System.out.println(gerador.getNumero1() + " x " + gerador.getNumero2());
         }  
     }
+
+    
 }

@@ -1,18 +1,22 @@
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Campeonato {
 
+
+    // private Listas lista;
+    private Equipes formato;
+    private int QuantidadeEquipes = 6;
     private Scanner sc;
     private ArrayList <Time> equipes;
-    private Partida partida;
 
     public Campeonato(){
 
+        formato = new Equipes();
         sc = new Scanner(System.in);
         equipes = new ArrayList<Time>();
 
-        for (int i = 1; i <= 2; i++){
+        for (int i = 1; i <= QuantidadeEquipes; i++){
 
             System.out.println("Digite o nome do time " + i + ": ");
             Time time = new Time(this.sc.nextLine());
@@ -23,12 +27,10 @@ public class Campeonato {
     }
 
     public void Inicio(){
+       formato.Seleciona(equipes);
+       System.out.println("Ini dos vencedores");
+       formato.Seleciona(formato.getPerdedores());
 
-        for (int i = 0; i < equipes.size(); i+= 2){
-            Time time1 = equipes.get(i);
-            Time time2 = equipes.get(i+1);
-            partida = new Partida(time1, time2);
-            
-        }
     }
+
 }
